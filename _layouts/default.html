@@ -14,12 +14,26 @@
   <body>
     <div class="flex-center">
       <div class="container">
+
         <h1 class="text-center">{{ site.title }}</h1>
         <p class="text-center text-muted">{{ site.description }}</p>
+
         <div class="flex-left top-gap-big">
-          <div class="unit-0"><img alt="xcatliu" src="{{ site.avatar }}" width="64"/></div>
+          <div class="unit-0">
+            <img class="site-avatar" alt="avatar" src="{{ site.avatar }}"/>
+          </div>
           <p class="unit-0 site-bubble">{{ site.introduction }}</p>
         </div>
+
+        <h2>{{ site.working.title }}</h2>
+        {% for item in site.working.timeline %}
+          {% if item.date %}
+            <p>date: {{ item.date }}</p>
+          {% else %}
+            <p>{{ item }}</p>
+          {% endif %}
+        {% endfor %}
+        
         {{ content }}
         <p>Please goto <a href="http://blog.xcatliu.com/about/">http://blog.xcatliu.com/about/</a></p>
         {% include projects.html %}

@@ -1,12 +1,19 @@
+.site-avatar {
+  width: 64px;
+  /* Prevent the width change by flexbox */
+  min-width: 64px;
+  max-width: 64px;
+}
+
 .site-bubble {
   background-color: #f3f3f3;
   margin: 0 0 0 20px;
-  padding: 14px;
+  padding: 14px 20px;
   position: relative;
   border-radius: 5px;
 }
 .site-bubble:before {
-  content:"";
+  content: "";
   position: absolute;
   right: 100%;
   top: 24px;
