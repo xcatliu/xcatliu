@@ -23,3 +23,26 @@
   border-right: 10px solid #f3f3f3;
   border-bottom: 8px solid transparent;
 }
+
+.site-date {
+  display: inline-block;
+  width: 70px;
+  position: relative;
+  text-align: right;
+}
+.site-date:before {
+  content: "";
+  position: absolute;
+  left: 80px;
+  top: 6px;
+  width: 10px;
+  height: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
+.site-experience {
+  margin: 0 0 -14px 84px;
+  padding-left: 14px;
+  border-left: 2px solid #ccc;
+}
