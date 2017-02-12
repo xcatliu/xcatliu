@@ -1,3 +1,16 @@
-{{ content }}
-
-{% include projects.html %}
+<doctype html>
+<html>
+  <head>
+    <title>{{ site.title }}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mobi.css/1.1.0/mobi.min.css" />
+  </head>
+  <body>
+    <div class="flex-center">
+      <div class="container">
+        {{ content }}
+        <p>Please goto <a href="http://blog.xcatliu.com/about/">http://blog.xcatliu.com/about/</a></p>
+        {% include projects.html %}
+      </div>
+    </div>
+  </body>
+</html>
