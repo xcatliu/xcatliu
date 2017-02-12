@@ -34,6 +34,15 @@
           {% endif %}
         {% endfor %}
 
+        <h2>{{ site.education.title }}</h2>
+        {% for item in site.education.timeline %}
+          {% if item.date %}
+            <p class="site-date"><small><time>{{ item.date }}</time></small></p>
+          {% else %}
+            <p class="site-experience">{{ item }}</p>
+          {% endif %}
+        {% endfor %}
+
         {{ content }}
         <p>Please goto <a href="http://blog.xcatliu.com/about/">http://blog.xcatliu.com/about/</a></p>
         {% include projects.html %}

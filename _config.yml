@@ -11,11 +11,18 @@ working:
   title: Working Experience
   timeline:
     - date: Now
-    - Microsoft Software Engineer II
+    - Microsoft &nbsp;&nbsp; Software Engineer II
     - date: 2016-04
-    - Meituan Senior Front-End Engineer
+    - Meituan &nbsp;&nbsp; Senior Front-End Engineer
     - date: 2015-04
-    - Meituan Front-End Engineer
+    - Meituan &nbsp;&nbsp; Front-End Engineer
     - date: 2013-06
-    - Meituan Front-End Engineer Internship
+    - Meituan &nbsp;&nbsp; Front-End Engineer Internship
     - date: 2012-10
+
+education:
+  title: Education Background
+  timeline:
+    - date: 2013-06
+    - "Bachelor of WuHan University &nbsp;&nbsp; Major: Computer Science and Technology"
+    - date: 2009-09
