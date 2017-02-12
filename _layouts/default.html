@@ -9,15 +9,16 @@
 
     <link rel="shortcut icon" type="image/png" href="{{ site.avatar }}"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mobi.css/1.1.0/mobi.min.css" />
+    <link rel="stylesheet" href="/assets/css/site.css" />
   </head>
   <body>
     <div class="flex-center">
       <div class="container">
         <h1 class="text-center">{{ site.title }}</h1>
         <p class="text-center text-muted">{{ site.description }}</p>
-        <div class="flex-left units-gap top-gap-big">
-          <div class="unit-0"><img alt="xcatliu" src="{{ site.avatar }}" width="48"/></div>
-          <div class="unit site-bubble">{{ site.introduction }}</div>
+        <div class="flex-left top-gap-big">
+          <div class="unit-0"><img alt="xcatliu" src="{{ site.avatar }}" width="64"/></div>
+          <p class="unit-0 site-bubble">{{ site.introduction }}</p>
         </div>
         {{ content }}
         <p>Please goto <a href="http://blog.xcatliu.com/about/">http://blog.xcatliu.com/about/</a></p>
