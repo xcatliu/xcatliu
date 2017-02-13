@@ -32,11 +32,11 @@
   function fillProjectElement(element, data) {
     element.innerHTML = `
       <a href="${data.html_url}">${data.name}</a>
-      &nbsp;&nbsp;&nbsp;&nbsp;
-      <strong>${data.stargazers_count}</strong>
+      &nbsp;&nbsp;&nbsp
+      ${data.stargazers_count}
       <small class="text-muted site-project-stars">STARS</small>
       &nbsp;
-      <strong>${data.forks_count}</strong>
+      ${data.forks_count}
       <small class="text-muted site-project-stars">FORKS</small>
       <br/>
       <small class="text-muted">
