@@ -1,11 +1,11 @@
 (function () {
-  const GitHubAPIReposPrefix = 'https://api.github.com/repos/';
+  var GitHubAPIReposPrefix = 'https://api.github.com/repos/';
 
-  let projectElements = document.getElementsByClassName('site-project');
+  var projectElements = document.getElementsByClassName('site-project');
   if (projectElements.length === 0) return;
 
-  for (let i = 0; i < projectElements.length; i++) {
-    let projectElement = projectElements[i];
+  for (var i = 0; i < projectElements.length; i++) {
+    var projectElement = projectElements[i];
     fetchRepoDataFromGitHubAPI(projectElement.dataset.github, (data) => {
       fillProjectElement(projectElement, data);
     });
