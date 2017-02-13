@@ -31,12 +31,12 @@
       <a href="${data.html_url}">${data.name}</a>
       &nbsp;&nbsp;&nbsp;&nbsp;
       <strong class="site-project-count">${data.stargazers_count}</strong>
-      <small class="text-muted">STARS<small>
+      <small class="text-muted">STARS</small>
       &nbsp;
       <strong class="site-project-count">${data.forks_count}</strong>
-      <small class="text-muted">FORKS<small>
+      <small class="text-muted">FORKS</small>
       <br/>
-      ${data.description}
+      <small class="text-muted">${data.description}</small>
       &nbsp;
       <a href="${data.homepage}">${data.homepage}</a>
     `;
