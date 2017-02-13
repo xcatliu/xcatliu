@@ -33,14 +33,6 @@
   border-bottom: 8px solid transparent;
 }
 
-.site-project h3 {
-  font-size: 2rem;
-  line-height: 3rem;
-}
-.site-project-meta {
-  font-size: 1.2rem;
-  line-height: 3rem;
-}
 .site-project-count {
   color: #333;
   font-size: 1.6rem;

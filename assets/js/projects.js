@@ -28,20 +28,17 @@
 
   function fillProjectElement(element, data) {
     element.innerHTML = `
-      <div class="flex-left">
-        <h3 class="top-gap-0"><a href="${data.html_url}">${data.name}</a></h3>
-        <div class="unit"></div>
-        <small class="text-muted site-project-meta">
-          <strong class="site-project-count">${data.stargazers_count}</strong> STARS
-          &nbsp;
-          <strong class="site-project-count">${data.forks_count}</strong> FORKS
-        </small>
-      </div>
-      <p>
-        ${data.description}
+      <a href="${data.html_url}">${data.name}</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      <small class="text-muted">
+        <strong class="site-project-count">${data.stargazers_count}</strong> STARS
         &nbsp;
-        <a href="${data.homepage}">${data.homepage}</a>
-      </p>
+        <strong class="site-project-count">${data.forks_count}</strong> FORKS
+      </small>
+      <br/>
+      ${data.description}
+      &nbsp;
+      <a href="${data.homepage}">${data.homepage}</a>
     `;
   }
 })();

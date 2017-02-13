@@ -34,9 +34,13 @@
         </div>
 
         <h2>{{ site.projects.title }}</h2>
-        {% for item in site.projects.github %}
-          <div class="site-project top-gap-big" data-github="{{ item }}"></div>
-        {% endfor %}
+        <ul>
+          {% for item in site.projects.github %}
+            <li class="site-project top-gap-big" data-github="{{ item }}">
+              Fetching {{ item }} ...
+            </li>
+          {% endfor %}
+        </ul>
         {{ site.projects.content }}
 
         <h2>{{ site.working.title }}</h2>
