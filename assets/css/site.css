@@ -39,14 +39,14 @@
 
 .site-date {
   display: inline-block;
-  width: 70px;
+  width: 64px;
   position: relative;
   text-align: right;
 }
 .site-date:before {
   content: "";
   position: absolute;
-  left: 80px;
+  left: 72px;
   top: 6px;
   width: 10px;
   height: 10px;
@@ -55,7 +55,7 @@
 }
 
 .site-experience {
-  margin: 0 0 -14px 84px;
+  margin: 0 0 -14px 76px;
   padding-left: 14px;
   border-left: 2px solid #ccc;
 }
