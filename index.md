@@ -8,9 +8,3 @@
 Other projects that I have contributed can be found in [github.com/xcatliu](https://github.com/xcatliu).
 
 If you love my projects, please [buy me a coffee](https://github.com/xcatliu/buy-me-a-coffee) to support me.
-
-## Contact Me
-
-[GitHub](https://github.com/xcatliu), [Twitter](https://twitter.com/xcatliu), [Gmail](xcatliu@gmail.com), [V2EX](https://www.v2ex.com/member/xcatliu?r=xcatliu), [知乎](https://www.zhihu.com/people/xcat-liu), [微博](http://weibo.com/xcatliu)
-
-What's more? You can even [GOOGLE ME](https://www.google.com/search?q=xcatliu)!

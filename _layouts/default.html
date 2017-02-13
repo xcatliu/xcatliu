@@ -7,7 +7,7 @@
     <meta name="description" content="{{ site.description }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="shortcut icon" type="image/png" href="{{ site.avatar }}"/>
+    <link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mobi.css/1.1.0/mobi.min.css" />
     <link rel="stylesheet" href="/assets/css/site.css" />
   </head>
@@ -18,9 +18,17 @@
         <h1 class="text-center">{{ site.title }}</h1>
         <p class="text-center text-muted">{{ site.description }}</p>
 
+        <p>
+          {% for item in site.social %}
+            <a class="site-social-link" href="{{ item.url }}" title="{{ item.title }}">
+              <img class="site-social-img" src="{{ item.img }}" width="24" height="24" />
+            </a>
+          {% endfor %}
+        </p>
+
         <div class="flex-left top-gap-big">
           <div class="unit-0">
-            <img class="site-avatar" alt="avatar" src="{{ site.avatar }}"/>
+            <img class="site-avatar" alt="avatar" src="{{ site.avatar }}" width="64" height="64" />
           </div>
           <p class="unit-0 site-bubble">{{ site.introduction }}</p>
         </div>

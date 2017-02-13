@@ -1,7 +1,27 @@
 title: xcatliu / 流浪小猫
 description: A cat who writes code
 
-avatar: /assets/avatar.png
+social:
+  - title: GitHub
+    img: /assets/images/github.ico
+    url: https://github.com/xcatliu
+  - title: Gmail
+    img: /assets/images/gmail.png
+    url: mailto:xcatliu@gmail.com
+  - title: V2EX
+    img: /assets/images/v2ex.png
+    url: https://www.v2ex.com/member/xcatliu?r=xcatliu
+  - title: Twitter
+    img: /assets/images/twitter.ico
+    url: https://twitter.com/xcatliu
+  - title: 知乎
+    img: /assets/images/zhihu.ico
+    url: https://www.zhihu.com/people/xcat-liu
+  - title: 微博
+    img: /assets/images/weibo.ico
+    url: http://weibo.com/xcatliu
+
+avatar: /assets/images/avatar.png
 introduction: >
   Hi! My name is Xcat Liu.<br/>
   中文昵称是流浪小猫，也可以叫我小猫。<br/>
