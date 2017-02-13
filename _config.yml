@@ -20,9 +20,20 @@ social:
 
 avatar: /assets/images/avatar.png
 introduction: >
-  Hi! My name is Xcat Liu.<br/>
+  Hi! My nickname is xcatliu.<br/>
   中文昵称是流浪小猫，也可以叫我小猫。<br/>
   Whenever you see this lovely cat, yeah that’s me!
+
+projects:
+  title: Open Source Projects
+  github:
+    - xcatliu/mobi.css
+    - xcatliu/typescript-tutorial
+    - xcatliu/react-ie8
+    - xcatliu/jekyllcn
+  content: >
+    <p>Other projects that I have contributed can be found in <a href="https://github.com/xcatliu">github.com/xcatliu</a>.</p>
+    <p>If you love my projects, please <a href="https://github.com/xcatliu/buy-me-a-coffee">buy me a coffee</a> to support me.</p>
 
 working:
   title: Working Experience

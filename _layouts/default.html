@@ -33,6 +33,12 @@
           <p class="unit-0 site-bubble">{{ site.introduction }}</p>
         </div>
 
+        <h2>{{ site.projects.title }}</h2>
+        {% for item in site.projects.github %}
+          <div class="site-project top-gap-big" data-github="{{ item }}"></div>
+        {% endfor %}
+        {{ site.projects.content }}
+
         <h2>{{ site.working.title }}</h2>
         {% for item in site.working.timeline %}
           {% if item.date %}
@@ -62,6 +68,7 @@
       </div>
     </div>
 
+    <script src="../assets/js/projects.js"></script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
