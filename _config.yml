@@ -5,21 +5,18 @@ social:
   - title: GitHub
     img: /assets/images/github.ico
     url: https://github.com/xcatliu
-  - title: Gmail
-    img: /assets/images/gmail.png
-    url: mailto:xcatliu@gmail.com
   - title: V2EX
     img: /assets/images/v2ex.png
     url: https://www.v2ex.com/member/xcatliu?r=xcatliu
+  - title: Blog
+    img: /assets/images/avatar.png
+    url: http://blog.xcatliu.com
   - title: Twitter
     img: /assets/images/twitter.ico
     url: https://twitter.com/xcatliu
-  - title: 知乎
-    img: /assets/images/zhihu.ico
-    url: https://www.zhihu.com/people/xcat-liu
-  - title: 微博
-    img: /assets/images/weibo.ico
-    url: http://weibo.com/xcatliu
+  - title: Gmail
+    img: /assets/images/gmail.png
+    url: mailto:xcatliu@gmail.com
 
 avatar: /assets/images/avatar.png
 introduction: >
