@@ -39,7 +39,7 @@
       <small class="text-muted">
         ${data.description}
         &nbsp;
-        <a href="${data.homepage}">${data.homepage}</a>
+        <a class="text-muted" href="${data.homepage}">${data.homepage}</a>
       </small>
     `;
   }
