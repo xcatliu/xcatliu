@@ -5,7 +5,10 @@
   if (projectElements.length === 0) return;
 
   for (var i = 0; i < projectElements.length; i++) {
-    var projectElement = projectElements[i];
+    buildElement(projectElements[i]);
+  }
+
+  function buildElement(projectElement) {
     fetchRepoDataFromGitHubAPI(projectElement.dataset.github, (data) => {
       fillProjectElement(projectElement, data);
     });
