@@ -33,9 +33,8 @@
   border-bottom: 8px solid transparent;
 }
 
-.site-project-count {
-  color: #333;
-  font-size: 1.6rem;
+.site-project-stars {
+  font-size: 1.2rem;
 }
 
 .site-date {
