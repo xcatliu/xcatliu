@@ -36,9 +36,11 @@
       <strong class="site-project-count">${data.forks_count}</strong>
       <small class="text-muted">FORKS</small>
       <br/>
-      <small class="text-muted">${data.description}</small>
-      &nbsp;
-      <a href="${data.homepage}">${data.homepage}</a>
+      <small class="text-muted">
+        ${data.description}
+        &nbsp;
+        <a href="${data.homepage}">${data.homepage}</a>
+      </small>
     `;
   }
 })();
