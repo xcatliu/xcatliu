@@ -93,7 +93,8 @@
 
     var repo = element.dataset.github;
     element.innerHTML = `
-      Fetch <a href="${GITHUB_REPO_PREFIX}${repo}">${repo}</a> fails: ${error.message}
+      Fetch <a href="${GITHUB_REPO_PREFIX}${repo}">${repo}</a> fails:
+      <small class="text-muted">${error.message}</small>
     `
   }
 })();
