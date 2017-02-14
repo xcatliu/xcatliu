@@ -37,7 +37,7 @@
         <ul>
           {% for item in site.projects.github %}
             <li class="site-project" data-github="{{ item }}">
-              Fetching {{ item }} ...
+              Fetching <a href="https://github.com/{{ item }}">{{ item }}</a> ...
             </li>
           {% endfor %}
         </ul>

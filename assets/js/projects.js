@@ -1,32 +1,73 @@
 (function () {
-  var GitHubAPIReposPrefix = 'https://api.github.com/repos/';
+  var GITHUB_API_REPOS_PREFIX = 'https://api.github.com/repos/';
+  var PROJECT_CLASS_NAME = 'site-project';
+  var GITHUB_REPO_PREFIX = 'https://github.com/';
 
-  var projectElements = document.getElementsByClassName('site-project');
+  var ERROR_EMPTY_RESPONSE = 'Empty response';
+  var ERROR_NOT_JSON = 'Only accept json response';
+
+  var projectElements = document.getElementsByClassName(PROJECT_CLASS_NAME);
   if (projectElements.length === 0) return;
-
+  
   for (var i = 0; i < projectElements.length; i++) {
     buildElement(projectElements[i]);
   }
 
   function buildElement(projectElement) {
-    fetchRepoDataFromGitHubAPI(projectElement.dataset.github, (data) => {
-      fillProjectElement(projectElement, data);
-    });
+    if (projectElement && projectElement.dataset && projectElement.dataset.github) {
+      fetchRepoDataFromGitHubAPI(projectElement.dataset.github, successData => {
+        fillProjectElement(projectElement, successData);
+      }, error => {
+        fillProjectElementWithError(projectElement, error);
+      });
+    }
   }
 
-  function fetchRepoDataFromGitHubAPI(repoPath, callback) {
-    var url = GitHubAPIReposPrefix + repoPath;
+  function fetchRepoDataFromGitHubAPI(repoPath, successCallback, failureCallback) {
+    var url = GITHUB_API_REPOS_PREFIX + repoPath;
 
-    fetch(url).then(data => data.json()).then(data => {
-      callback({
-        name: data.name,
-        html_url: data.html_url,
-        description: data.description,
-        homepage: data.homepage,
-        stargazers_count: data.stargazers_count,
-        forks_count: data.forks_count,
+    fetch(url)
+      .then(handleErrors)
+      .then(data => data.json()).then(data => {
+        successCallback({
+          name: data.name,
+          html_url: data.html_url,
+          description: data.description,
+          homepage: data.homepage,
+          stargazers_count: data.stargazers_count,
+          forks_count: data.forks_count,
+        });
+      }).catch(failureCallback);
+  }
+
+  function handleErrors(response) {
+    if (!response) {
+      throw new Error(ERROR_EMPTY_RESPONSE);
+    }
+
+    if (!response.ok) {
+      if (!isJson(response)) {
+        throw new Error(response.statusText);
+      }
+      return response.json().then(errorData => {
+        throw new Error(errorData.message || response.statusText);
       });
-    });
+    }
+
+    if (!isJson(response)) {
+      throw new Errow(ERROR_NOT_JSON);
+    }
+
+    return response;
+  }
+
+  function isJson(response) {
+    var contentType = response.headers.get('content-type');
+    if(contentType && contentType.indexOf('application/json') !== -1) {
+      return true;
+    } else {
+      return false;
+    }
   }
 
   function fillProjectElement(element, data) {
@@ -45,5 +86,14 @@
         <a class="text-muted" href="${data.homepage}">${data.homepage}</a>
       </small>
     `;
+  }
+
+  function fillProjectElementWithError(element, error) {
+    console.error(error);
+
+    var repo = element.dataset.github;
+    element.innerHTML = `
+      Fetch <a href="${GITHUB_REPO_PREFIX}${repo}">${repo}</a> fails: ${error.message}
+    `
   }
 })();
