@@ -33,33 +33,41 @@
           <p class="unit-0 site-bubble">{{ site.introduction }}</p>
         </div>
 
-        <h2>{{ site.projects.title }}</h2>
-        <ul>
-          {% for item in site.projects.github %}
-            <li class="site-project" data-github="{{ item }}">
-              Fetching <a href="https://github.com/{{ item }}">{{ item }}</a> ...
-            </li>
+        {% if site.projects %}
+          <h2>{{ site.projects.title }}</h2>
+          <ul>
+            {% for item in site.projects.github %}
+              <li class="site-project" data-github="{{ item }}">
+                Fetching <a href="https://github.com/{{ item }}">{{ item }}</a> ...
+              </li>
+            {% endfor %}
+          </ul>
+          {{ site.projects.content }}
+        {% endif %}
+
+
+        {% if site.working %}
+          <h2>{{ site.working.title }}</h2>
+          {% for item in site.working.timeline %}
+            {% if item.date %}
+              <p class="site-date"><small><time>{{ item.date }}</time></small></p>
+            {% else %}
+              <p class="site-experience">{{ item }}</p>
+            {% endif %}
           {% endfor %}
-        </ul>
-        {{ site.projects.content }}
+        {% endif %}
 
-        <h2>{{ site.working.title }}</h2>
-        {% for item in site.working.timeline %}
-          {% if item.date %}
-            <p class="site-date"><small><time>{{ item.date }}</time></small></p>
-          {% else %}
-            <p class="site-experience">{{ item }}</p>
-          {% endif %}
-        {% endfor %}
 
-        <h2>{{ site.education.title }}</h2>
-        {% for item in site.education.timeline %}
-          {% if item.date %}
-            <p class="site-date"><small><time>{{ item.date }}</time></small></p>
-          {% else %}
-            <p class="site-experience">{{ item }}</p>
-          {% endif %}
-        {% endfor %}
+        {% if site.education %}
+          <h2>{{ site.education.title }}</h2>
+          {% for item in site.education.timeline %}
+            {% if item.date %}
+              <p class="site-date"><small><time>{{ item.date }}</time></small></p>
+            {% else %}
+              <p class="site-experience">{{ item }}</p>
+            {% endif %}
+          {% endfor %}
+        {% endif %}
 
         {{ content }}
 
