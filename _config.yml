@@ -31,6 +31,8 @@ projects:
     - xcatliu/typescript-tutorial
     - xcatliu/react-ie8
     - xcatliu/jekyllcn
+    - xcatliu/leetcode
+    - xcatliu/xcatliu.github.io
   content: >
     <p>Other projects that I have contributed can be found in <a href="https://github.com/xcatliu">github.com/xcatliu</a>.</p>
     <p>If you love my projects, please <a href="https://github.com/xcatliu/buy-me-a-coffee">buy me a coffee</a> to support me.</p>
