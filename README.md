@@ -1,14 +1,7 @@
-## About me
+### Hi there 👋
 
-This is an about me page, please view the [live demo](http://xcatliu.com).
+My nickname is xcatliu.  
+中文昵称是流浪小猫，也可以叫我小猫。  
+Whenever you see this lovely cat, yeah that’s me!
 
-## Build your own page
-
-1. Fork this repo
-2. Update the name of your repo to `your_github_id.github.io`
-3. Update `CNAME` (leave it empty if you don't have a domain)
-4. Update `_config.yml` as you like
-
-## License
-
-MIT
+- I'm currently working on [pagic](https://github.com/xcatliu/pagic), a static-site-generator, built with Deno 🦕 and React.
