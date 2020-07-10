@@ -1,6 +1,7 @@
 ### Hi there 👋
 
-My nickname is xcatliu. 中文昵称是流浪小猫，也可以叫我小猫。
+My nickname is xcatliu.  
+中文昵称是流浪小猫，也可以叫我小猫。
 
 - 🔭 I'm currently working on [Pagic](https://github.com/xcatliu/pagic), a static-site-generator, built with Deno 🦕 and React
 - 📚 I'm the author of [《TypeScript 入门教程》](https://github.com/xcatliu/typescript-tutorial)
