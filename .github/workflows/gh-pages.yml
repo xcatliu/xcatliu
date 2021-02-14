@@ -21,7 +21,7 @@ jobs:
       - name: Build
         run: |
           deno --version
-          deno install --unstable --allow-read --allow-write --allow-net -n pagic https://deno.land/x/pagic@v1.2.0/mod.ts
+          deno install --unstable --allow-read --allow-write --allow-net --allow-run -n pagic https://deno.land/x/pagic@v1.2.0/mod.ts
           pagic build
 
       - name: Deploy
