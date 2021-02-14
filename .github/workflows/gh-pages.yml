@@ -10,14 +10,18 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Setup deno
+        uses: denolib/setup-deno@v2
+        with:
+          deno-version: v1.7.0
 
       - name: Build
         run: |
-          curl -fsSL https://deno.land/x/install/install.sh | sh
-          export DENO_INSTALL="/home/runner/.deno"
-          export PATH="$DENO_INSTALL/bin:$PATH"
           deno --version
-          deno install --unstable --allow-read --allow-write --allow-net -n pagic https://deno.land/x/pagic@0.7.29/mod.ts
+          deno install --unstable --allow-read --allow-write --allow-net -n pagic https://deno.land/x/pagic@v1.2.0/mod.ts
           pagic build
 
       - name: Deploy
